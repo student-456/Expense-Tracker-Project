@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <div class="balance">
+      <h2>Your Balance</h2>
+      <h3 id="balance">0</h3>
+    </div>
+
+    <div class="income-expense">
+      <div>
+        <h4>Income</h4>
+        <p id="income">0</p>
+      </div>
+      <div>
+        <h4>Expense</h4>
+        <p id="expense">0</p>
+      </div>
+    </div>
+
+    <div class="add-expense">
+      <h3>Add New Expense</h3>
+      <form id="expense-form">
+        <input type="text" placeholder="Description" id="desc" required />
+        <input type="number" placeholder="Amount" id="amount" required />
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <div class="history">
+      <h3>Transaction History</h3>
+      <ul id="transaction-list"></ul>
+    </div>
+  </div>
+  <div class="add-expense">
+  <h3>Add New Expense</h3>
+  <form id="expense-form">
+    <input type="text" placeholder="Description" id="desc" required />
+    <input type="number" placeholder="Amount" id="amount" required />
+    
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+
+    <select id="category">
+      <option value="general">General</option>
+      <option value="food">Food</option>
+      <option value="transport">Transport</option>
+      <option value="entertainment">Entertainment</option>
+      <option value="shopping">Shopping</option>
+      <option value="salary">Salary</option>
+    </select>
+
+    <button type="submit">Add</button>
+  </form>
+</div>
+
+<!-- Chart Section -->
+<div class="chart-container">
+  <h3>Expenses by Category</h3>
+  <canvas id="expenseChart" width="400" height="200"></canvas>
+</div>
+
+<!-- Add Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
